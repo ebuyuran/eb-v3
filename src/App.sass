@@ -1,0 +1,129 @@
+body
+  font-family: Montserrat, Arial, Helvetica, sans-serif
+  background-image: url('./assets/background_1.jpg')
+  background-position: top center
+  padding: 0
+  font-size: 10px
+
+h1, h2, h3, h4
+  margin: 0
+  
+.app
+  width: 100em
+  padding: 6em 0
+  margin: auto
+
+header
+  position: relative
+
+  .card
+    width: 30em
+    text-align: center
+
+    h1
+      font-size: 3em
+      font-weight: 700
+
+    h2
+      font-size: 1.5em
+      font-weight: 400
+      color: #666
+    
+    img
+      width: 70%
+      margin: 2em 0 0 0
+
+    h3
+      font-size: 1.6em
+      margin: .6em 0 0 0
+      font-weight: 400
+
+  .welcome-message
+    position: absolute
+    width: 63em
+    top: 6em
+    left: 35em
+    font-weight: 400
+
+    .quote-marks
+      position: absolute
+      z-index: -1
+      top: -1em
+      left: -1.2em
+      width: 3.4em
+      height: 2.7em
+      fill: #DDD
+
+    span
+      font-size: 1.7em
+
+    .hello
+      font-size: 2em
+      font-weight: 700
+      margin: 0 0 .5em 0
+
+    p
+      line-height: 2.1em
+
+      strong
+        font-weight: 600
+
+main
+  margin: 10em 0 0 0
+
+  .company-details
+    margin: 3em 0 0 0
+
+    .company
+      font-size: 2.4em
+      font-weight: 700
+
+    .position
+      font-size: 1.9em
+      color: #666
+
+    .duration
+      margin: .6em 0 0 0
+      font-size: 1.4em
+      color: #666
+
+    ul
+      padding: 0 0 0 3em
+
+      li
+        font-size: 1.6em
+        margin: .6em 0
+
+.heading
+  span
+    font-size: 2.4em
+    font-weight: 700
+
+  .decoration
+    position: relative
+    width: 100%
+    height: .2em
+    margin: .6em 0 0 0
+    background: black
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 5em
+      height: .8em
+      background: black
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 5em
+      display: block
+      width: 0
+      height: 0
+      border-left: .8em solid black
+      border-right: .8em solid transparent
+      border-bottom: .8em solid transparent

@@ -13,9 +13,13 @@ h1, h2, h3, h4
   margin: 0
   
 .app
-  width: 100em
-  padding: 6em 0
-  margin: 0 auto 5em
+  width: 100%
+  padding: 1em 2em
+  margin: 0 auto
+
+  @media (min-width: 1040px)
+    width: 100em
+    padding: 6em 2em
 
 header
   position: relative
@@ -23,6 +27,10 @@ header
   .card
     width: 30em
     text-align: center
+    margin: auto
+
+    @media (min-width: 1040px)
+      margin: 0 0 14em
 
     h1
       font-size: 3em
@@ -43,20 +51,29 @@ header
       font-weight: 400
 
   .welcome-message
-    position: absolute
-    width: 63em
-    top: 6em
-    left: 35em
-    font-weight: 400
+    text-align: center
+    margin: 3em 0
+
+    @media (min-width: 1040px)
+      position: absolute
+      width: 63em
+      top: 6em
+      left: 35em
+      font-weight: 400
+      text-align: left
 
     .quote-marks
-      position: absolute
-      z-index: -1
-      top: -1em
-      left: -1.2em
-      width: 3.4em
-      height: 2.7em
-      fill: #DDD
+      display: none
+      
+      @media (min-width: 1040px)
+        display: block
+        position: absolute
+        z-index: -1
+        top: -1em
+        left: -1.2em
+        width: 3.4em
+        height: 2.7em
+        fill: #DDD
 
     span
       font-size: 1.7em
@@ -73,8 +90,6 @@ header
         font-weight: 600
 
 main
-  margin: 10em 0 0 0
-
   .company-details
     margin: 3em 0 0 0
 
@@ -159,19 +174,30 @@ main
       font-size: 1.6em
       
   .skills-body
-    position: relative
     display: flex
+    flex-wrap: wrap
+    position: relative
+    padding: 3em 0
     border: .2em solid black
     border-top: none
     background: rgba(255, 255, 255, .5)
+    
+    @media (min-width: 1040px)
+      padding: 0
 
     .heading
       position: absolute
+      top: 0
+      left: 0
       width: 100%
 
     .skills-body-col
-      width: 33.3%
-      padding: 3em 3em
+      width: 30em
+      padding: 0em 3em
+
+      @media (min-width: 1040px)
+        width: 33.3%
+        padding: 3em 3em
 
       ul
         margin: 0
@@ -191,6 +217,9 @@ main
 .other
   display: flex
   margin: 5em 0 0
+    
+  @media (min-width: 1040px)
+    
 
   .education
     width: 47.5%

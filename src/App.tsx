@@ -87,7 +87,7 @@ function App() {
           work={[
             'Worked on integrating RTL support for League of Legends Client Application. Since this was new to Riot, our team took the initiative to lead RTL support for other Riot services including, Riot Client, Player support hub, and Login services using Javascript, Stylus, and RTLCSS plugin.',
             'Created scalable Single Page Applications to promote in-game store merchandise on League of Legends Client Hub using React, TypeScript and Styled Components.',
-            'Integrated an independent streamer to lolesports.com with React',
+            'Integrated an independent streamer to lolesports.com with React.',
             'Rebranded LoL Cafe B2B web application (lolcafe.tr.leagueoflegends.com). I was merely responsible for Front-End development but ended up contributing to the design as well.',
             'Supervised development for User Generated Content competition app created with React.'
           ]}

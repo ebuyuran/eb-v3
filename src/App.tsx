@@ -2,10 +2,10 @@ import React from 'react';
 import logo from './assets/me.png';
 import './App.sass';
 
-function Heading(props: {text: string}) {
+function Heading(props: {text?: string}) {
   return (
     <div className={'heading'}>
-      <span>{props.text}</span>
+      { props.text ? <span>{props.text}</span> : null }
       <div className={'decoration'}></div>
     </div>
   )
@@ -128,6 +128,110 @@ function App() {
           ]}
         />
       </main>
+      <div className={'skills'}>
+        <div className={'skills-header'}>
+          <span>FRONT-END SKILLS</span>
+        </div>
+        <div className={'skills-body'}>
+          <Heading />
+          <div className={'skills-body-col'}>
+            <ul>
+              <li className={'strong'}>
+                <span>HTML5</span>
+              </li>
+              <li className={'strong'}>
+                <span>CSS</span>
+              </li>
+              <li>
+                <span>SASS</span>
+              </li>
+              <li>
+                <span>Stylus</span>
+              </li>
+              <li>
+                <span>Styled Components</span>
+              </li>
+              <li className={'strong'}>
+                <span>JavaScript</span>
+              </li>
+              <li>
+                <span>ES6</span>
+              </li>
+              <li>
+                <span>TypeScript</span>
+              </li>
+              <li>
+                <span>React, Redux</span>
+              </li>
+              <li>
+                <span>Restful APIs, GraphQL</span>
+              </li>
+              <li>
+                <span>Mocha, Chai, Sinon</span>
+              </li>
+            </ul>
+          </div>
+          <div className={'skills-body-col'}>
+            <ul>
+              <li className={'strong'}>
+                <span>Build Automation</span>
+              </li>
+              <li>
+                <span>NPM & NVM</span>
+              </li>
+              <li>
+                <span>Gulp</span>
+              </li>
+              <li>
+                <span>Webpack</span>
+              </li>
+              <li className={'strong'}>
+                <span>Mobile Development</span>
+              </li>
+              <li>
+                <span>Dart & Flutter</span>
+              </li>
+              <li className={'strong'}>
+                <span>Other</span>
+              </li>
+              <li>
+                <span>Lighthouse</span>
+              </li>
+              <li>
+                <span>Cross-Browser & Platform Compatibility</span>
+              </li>
+            </ul>
+          </div>
+          <div className={'skills-body-col'}>
+            <ul>
+              <li className={'strong'}>
+                <span>UI & UX</span>
+              </li>
+              <li>
+                <span>Adobe Photoshop</span>
+              </li>
+              <li>
+                <span>Adobe Illustrator</span>
+              </li>
+              <li>
+                <span>Figma</span>
+              </li>
+              <li>
+                <span>Responsive Design</span>
+              </li>
+              <li>
+                <span>CSS Animations</span>
+              </li>
+              <li>
+                <span>Dynamic SVG</span>
+              </li>
+              <li>
+                <span>Right-To-Left Interfaces</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,13 @@
+*, *:before, *:after
+  box-sizing: inherit
+  
 body
   font-family: Montserrat, Arial, Helvetica, sans-serif
   background-image: url('./assets/background_1.jpg')
   background-position: top center
   padding: 0
   font-size: 10px
+  box-sizing: border-box
 
 h1, h2, h3, h4
   margin: 0
@@ -11,7 +15,7 @@ h1, h2, h3, h4
 .app
   width: 100em
   padding: 6em 0
-  margin: auto
+  margin: 0 auto 20em
 
 header
   position: relative
@@ -96,14 +100,15 @@ main
 
 .heading
   span
+    display: block
     font-size: 2.4em
     font-weight: 700
+    padding: 0 0 .250em 0
 
   .decoration
     position: relative
     width: 100%
     height: .2em
-    margin: .6em 0 0 0
     background: black
 
     &:before
@@ -127,3 +132,58 @@ main
       border-left: .8em solid black
       border-right: .8em solid transparent
       border-bottom: .8em solid transparent
+
+.skills
+  margin: 5em 0 3em
+
+  .skills-header
+    position: relative
+    display: inline-block
+    background: black
+    color: white
+    padding: .8em 3em
+
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      display: block
+      width: 0
+      height: 0
+      border-left: .8em solid transparent
+      border-right: .8em solid white
+      border-bottom: .8em solid transparent
+
+    span
+      font-size: 1.6em
+      
+  .skills-body
+    position: relative
+    display: flex
+    border: .2em solid black
+    border-top: none
+    background: rgba(255, 255, 255, .5)
+
+    .heading
+      position: absolute
+      width: 100%
+
+    .skills-body-col
+      width: 33.3%
+      padding: 3em 3em
+
+      ul
+        margin: 0
+        padding: 0
+
+        li
+          margin: 0 0 .2em 2em
+
+          span
+            font-size: 1.6em
+
+          &.strong
+            font-weight: 600
+            list-style: none
+            margin-left: 0

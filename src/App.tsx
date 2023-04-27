@@ -232,6 +232,40 @@ function App() {
           </div>
         </div>
       </div>
+      <div className={'other'}>
+        <div className={'education'}>
+          <Heading text={'EDUCATION'} />
+          <div className={'school'}>
+            <div className={'name'}>Istanbul Commerce University</div>
+            <div className={'field'}>Visual Communication</div>
+            <div className={'duration'}>2009 - 2015</div>
+          </div>
+          <div className={'school'}>
+            <div className={'name'}>Yelkikanat Anadolu Meslek Lisesi</div>
+            <div className={'field'}>Vocational High School - Computer</div>
+            <div className={'duration'}>2004 - 2009</div>
+          </div>
+          <div className={'school'}>
+            <div className={'name'}>İSTEK Acıbadem College</div>
+            <div className={'field'}>Middle School</div>
+            <div className={'duration'}>2000 - 20004</div>
+          </div>
+          <div className={'school'}>
+            <div className={'name'}>Eyüboğlu College</div>
+            <div className={'field'}>Primary Education</div>
+            <div className={'duration'}>1995 - 2000</div>
+          </div>
+        </div>
+        <div className={'languages'}>
+          <Heading text={'LANGUAGES'} />
+          <div className={'language'}>
+            <span>Turkish: Native</span>
+          </div>
+          <div className={'language'}>
+            <span>English: Proficient</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

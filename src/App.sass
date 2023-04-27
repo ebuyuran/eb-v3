@@ -15,7 +15,7 @@ h1, h2, h3, h4
 .app
   width: 100em
   padding: 6em 0
-  margin: 0 auto 20em
+  margin: 0 auto 5em
 
 header
   position: relative
@@ -134,7 +134,7 @@ main
       border-bottom: .8em solid transparent
 
 .skills
-  margin: 5em 0 3em
+  margin: 5em 0 0
 
   .skills-header
     position: relative
@@ -187,3 +187,40 @@ main
             font-weight: 600
             list-style: none
             margin-left: 0
+
+.other
+  display: flex
+  margin: 5em 0 0
+
+  .education
+    width: 47.5%
+    margin: 0 2.5% 0 0
+
+    .school
+      margin: 1em 0
+      font-size: 1.6em
+
+      &:nth-child(2)
+        margin-top: 2em
+
+      .name
+        font-weight: 600
+
+      .field
+
+      .duration
+        color: #666
+        font-size: .8em
+
+  .languages
+    width: 47.5%
+    margin: 0 0 0 2.5%
+
+    .language
+      margin: 1em 0
+
+      &:nth-child(2)
+        margin-top: 3em
+
+      span
+        font-size: 1.6em

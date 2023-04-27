@@ -1,6 +1,32 @@
 import React from 'react';
 import logo from './assets/me.png';
 import './App.sass';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+import PixelSS1 from './assets/work_screenshots/pixel_bazaar.jpg';
+import PixelSS2 from './assets/work_screenshots/pixel_isorast.jpg';
+import PixelSS3 from './assets/work_screenshots/pixel_patilidostum.jpg';
+import PixelSS4 from './assets/work_screenshots/pixel_pointgroup.jpg';
+import PixelSS5 from './assets/work_screenshots/pixel_sarissa.jpg';
+import OneVOneYSS1 from './assets/work_screenshots/1v1y_1.jpg';
+import OneVOneYSS2 from './assets/work_screenshots/1v1y_2.jpg';
+import OneVOneYSS3 from './assets/work_screenshots/1v1y_3.jpg';
+import OneVOneYSS4 from './assets/work_screenshots/1v1y_4.jpg';
+import OneVOneYSS5 from './assets/work_screenshots/1v1y_5.jpg';
+import NoluyoSS1 from './assets/work_screenshots/noluyo_1.jpg';
+import NoluyoSS2 from './assets/work_screenshots/noluyo_2.jpg';
+import NoluyoSS3 from './assets/work_screenshots/noluyo_3.jpg';
+import TheKingSS1 from './assets/work_screenshots/theking_huawei.jpg';
+import TheKingSS2 from './assets/work_screenshots/theking_hyundai.jpg';
+import TheKingSS3 from './assets/work_screenshots/theking__kaplan.jpg';
+import SpinmaticSS1 from './assets/work_screenshots/spinmatic_1.jpg';
+import SpinmaticSS2 from './assets/work_screenshots/spinmatic_2.jpg';
+import SpinmaticSS3 from './assets/work_screenshots/spinmatic_3.jpg';
+import SpinmaticSS4 from './assets/work_screenshots/spinmatic_4.jpg';
+import RitoSS1 from './assets/work_screenshots/riotgames_lolcafe.jpg';
+import RitoSS2 from './assets/work_screenshots/riotgames_lol1.jpg';
+import RitoSS3 from './assets/work_screenshots/riotgames_lol2.jpg';
 
 function Heading(props: {text?: string}) {
   return (
@@ -11,20 +37,42 @@ function Heading(props: {text?: string}) {
   )
 }
 
-function CompanyDetails(props: {name: string, position: string, duration: string, work: string[]}) {
+function CompanyDetails(props: {name: string, position: string, duration: string, work?: string[], screenshots?: string[]}) {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <div className={'company-details'}>
-    <div>
-      <span className={'company'}>{props.name}</span>
-      <span className={'position'}>{' - ' + props.position}</span>
+      {props.screenshots ? (
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          slides={props.screenshots.map((ss) => {
+            return {
+              src: ss
+            }
+          })}
+        />
+      ) : null}
+
+      <div>
+        <span className={'company'}>{props.name}</span>
+        <span className={'position'}>{' - ' + props.position}</span>
+      </div>
+      <div>
+        <span className={'duration'}>{props.duration}</span>
+      </div>
+      {props.work ? (
+        <ul>
+          {props.work.map((detail) => <li>{detail}</li>)}
+        </ul>
+      ) : null}
+      { props.screenshots ? (
+        <div className={'screenshots'}>
+          {props.screenshots.map((ss) => <img src={ss} alt={'Screenshot'} onClick={() => setOpen(true)} />)}
+        </div>
+        ) : null 
+      }
     </div>
-    <div>
-      <span className={'duration'}>{props.duration}</span>
-    </div>
-    <ul>
-      {props.work.map((detail) => <li>{detail}</li>)}
-    </ul>
-  </div>
   )
 }
 
@@ -91,6 +139,7 @@ function App() {
             'Rebranded LoL Cafe B2B web application (lolcafe.tr.leagueoflegends.com). I was merely responsible for Front-End development but ended up contributing to the design as well.',
             'Supervised development for User Generated Content competition app created with React.'
           ]}
+          screenshots={[RitoSS1, RitoSS2, RitoSS3]}
         />
         <CompanyDetails 
           name={'Spinmatic Entertainment'}
@@ -100,6 +149,7 @@ function App() {
             'Worked on the development of a pre-designed mobile app that supports multiple slot games, took responsibility, and delivered a new UX-friendly design with better features using Adobe Tools, React and Redux and SASS.',
             'Setup a paytable app to work inside slot games which supported manual theming for different game designs.'
           ]}
+          screenshots={[SpinmaticSS1, SpinmaticSS2, SpinmaticSS3, SpinmaticSS4]}
         />
         <CompanyDetails 
           name={'The King Content Creative Agency'}
@@ -110,6 +160,7 @@ function App() {
             'Built websites for small businesses.',
             'Made animated banner ads with HTML5 & CSS.'
           ]}
+          screenshots={[TheKingSS1, TheKingSS2, TheKingSS3]}
         />
         <CompanyDetails 
           name={'N’oluyo'}
@@ -118,6 +169,7 @@ function App() {
           work={[
             'Maintained an existing web platform, fixed bugs, provided UX solutions, implemented new features.',
           ]}
+          screenshots={[NoluyoSS1, NoluyoSS2, NoluyoSS3]}
         />
         <CompanyDetails 
           name={'1V1Y'}
@@ -126,6 +178,13 @@ function App() {
           work={[
             'I was responsible from providing page designs for an online magazine that features fashion elements and inspirations.'
           ]}
+          screenshots={[OneVOneYSS1, OneVOneYSS2, OneVOneYSS3, OneVOneYSS4, OneVOneYSS5]}
+        />
+        <CompanyDetails 
+          name={'Pixel Creative'}
+          position={'Designer & Jnr. Front-End Developer'}
+          duration={'Istanbul ~ Mar - Sep 2011'}
+          screenshots={[PixelSS1, PixelSS2, PixelSS3, PixelSS4, PixelSS5]}
         />
       </main>
       <div className={'skills'}>

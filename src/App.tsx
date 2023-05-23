@@ -85,6 +85,7 @@ function App() {
           <h2>Sn. Front-End Developer</h2>
           <img alt={'me'} src={logo} />
           <h3>efebuyuran@gmail.com</h3>
+          <h3><a href={'./CV-EfeBuyuran.pdf'} target={'_blank'} rel="noreferrer">Download CV</a></h3>
         </div>
         <div className={'welcome-message'}>
           <svg className={'quote-marks'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 27">
@@ -115,7 +116,7 @@ function App() {
               I believe in honesty, teamwork, and positivity for an efficient
               work environment. While being <strong>open to feedback</strong>, 
               <strong> accepting responsibility</strong>, and <strong>attention 
-              to detail</strong> are my secret superpowers.
+              to detail</strong> are my approach to professional work.
             </span>
           </p>
         </div>
@@ -318,10 +319,7 @@ function App() {
         <div className={'languages'}>
           <Heading text={'LANGUAGES'} />
           <div className={'language'}>
-            <span>Turkish: Native</span>
-          </div>
-          <div className={'language'}>
-            <span>English: Proficient</span>
+            <span>Turkish is my native language. I can read, write, and speak fluently in English.</span>
           </div>
         </div>
       </div>

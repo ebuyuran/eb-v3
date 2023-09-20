@@ -53,7 +53,6 @@ function CompanyDetails(props: {name: string, position: string, duration: string
           })}
         />
       ) : null}
-
       <div>
         <span className={'company'}>{props.name}</span>
         <span className={'position'}>{' - ' + props.position}</span>
